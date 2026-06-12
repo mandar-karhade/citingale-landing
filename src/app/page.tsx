@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import IntelligenceTubes from '@/components/IntelligenceTubes';
 import mediumPosts from '@/data/medium-posts.json';
 import { products, updates } from '@/data/site-content';
 
@@ -13,18 +14,7 @@ export default function Home() {
       <div className="site-grid relative">
         <div className="relative mx-auto w-full max-w-7xl min-w-0 px-5 py-7 sm:px-8 lg:px-10">
           <section className="video-hero">
-            <video
-              className="video-hero-media"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="https://assets.mixkit.co/videos/19630/19630-thumb-720-0.jpg"
-              aria-hidden="true"
-            >
-              <source src="https://assets.mixkit.co/videos/19630/19630-720.mp4" type="video/mp4" />
-            </video>
+            <IntelligenceTubes />
 
             <header className="video-hero-nav">
               <Link href="/" className="video-hero-brand" aria-label="Citingale home">
