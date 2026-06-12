@@ -1,35 +1,67 @@
 export const products = [
   {
     number: '01',
-    name: 'Citingale Review Studio',
+    name: 'Citingale VeroFAIR™',
     description:
-      'Plan and execute systematic literature reviews with protocol-aware screening, source tracking, extraction support, and reproducible evidence tables.',
-    tag: 'Primary platform',
-    href: 'mailto:contact@citingale.com?subject=Citingale%20Review%20Studio',
+      'A complete AI assisted research and writeup platform designed for traceable, source-grounded work that does not hallucinate.',
+    tag: 'Research platform',
+    href: 'mailto:contact@citingale.com?subject=Citingale%20VeroFAIR',
   },
   {
     number: '02',
-    name: 'Citingale Synthesis',
+    name: 'Citingale SoProLink™',
     description:
-      'Move from extracted evidence to narrative synthesis, structured summaries, evidence maps, and meta-analysis-ready outputs.',
-    tag: 'Evidence engine',
-    href: 'mailto:contact@citingale.com?subject=Citingale%20Synthesis',
+      'A domain specific information, alert, network, and social media content generation platform.',
+    tag: 'soprolink.com',
+    href: 'https://soprolink.com',
   },
   {
     number: '03',
-    name: 'Citingale Methods Library',
+    name: 'Citingale ARMS™',
     description:
-      'Reusable templates for review protocols, FAIR documentation, gap analysis, situation analysis, and evidence-based recommendations.',
-    tag: 'Methods hub',
-    href: 'mailto:contact@citingale.com?subject=Citingale%20Methods%20Library',
+      'A complete end to end Active Recall Management System for drug and device manufacturers.',
+    tag: 'Life sciences',
+    href: 'mailto:contact@citingale.com?subject=Citingale%20ARMS',
   },
   {
     number: '04',
-    name: 'Citingale Intelligence Briefs',
+    name: 'Citingale APQR',
     description:
-      'Short, inspectable research briefs that connect claims to citations, assumptions, and source-level reasoning for decision makers.',
-    tag: 'Briefing layer',
-    href: 'mailto:contact@citingale.com?subject=Citingale%20Intelligence%20Briefs',
+      'An AI-enhanced continuous process validation system for regulated manufacturing workflows.',
+    tag: 'Validation system',
+    href: 'mailto:contact@citingale.com?subject=Citingale%20APQR',
+  },
+  {
+    number: '05',
+    name: "Physician'sFriend™",
+    description:
+      'A privacy first suite that simplifies day-to-day work for physicians, clinical teams, and hospital systems.',
+    tag: 'Clinical workflow',
+    href: "mailto:contact@citingale.com?subject=Physician'sFriend",
+  },
+  {
+    number: '06',
+    name: 'OnlyOfflineApps™',
+    description:
+      'A privacy first suite of Android and Apple applications developed to support health and wellness without cloud dependency.',
+    tag: 'OnlyOffline.org',
+    href: 'https://onlyoffline.org',
+  },
+  {
+    number: '07',
+    name: 'Semaphone™',
+    description:
+      'Software that lets users automate anything on Android by providing natural language instructions.',
+    tag: 'Android automation',
+    href: 'mailto:contact@citingale.com?subject=Semaphone',
+  },
+  {
+    number: '08',
+    name: 'Research Projects',
+    description:
+      'Memory Decay in Knowledge Graphs, an active research project exploring persistence and degradation in structured knowledge systems.',
+    tag: 'arXiv 2604.26970',
+    href: 'https://arxiv.org/abs/2604.26970',
   },
 ] as const;
 
@@ -51,23 +83,23 @@ export const proofPoints = [
 export const updates = [
   {
     date: 'Jun 2026',
-    title: 'Daily Medium sync added to the roadmap',
-    category: 'Automation',
+    title: 'External news tracker planned',
+    category: 'Updates',
     subtitle:
-      'Citingale will refresh the latest @AiDocTakes articles at build time through a scheduled GitHub Actions workflow.',
+      'A separate tracker will publish significant news into an RSS or JSON feed that the Citingale updates page can consume later.',
   },
   {
     date: 'Jun 2026',
-    title: 'Product constellation direction selected',
-    category: 'Design',
+    title: 'Daily Medium sync added',
+    category: 'Automation',
     subtitle:
-      'The upgraded homepage will foreground product links, inspectable intelligence, and a restrained white-gray visual system.',
+      'Citingale refreshes the latest @AiDocTakes articles at build time through a scheduled GitHub Actions workflow.',
   },
   {
-    date: 'May 2026',
-    title: 'Inspectable intelligence as a design principle',
+    date: 'Jun 2026',
+    title: 'Product constellation updated',
     category: 'Product',
     subtitle:
-      'The site direction centers traceability, reproducibility, and researcher control instead of opaque AI output.',
+      'The homepage now foregrounds the actual Citingale product and research ecosystem.',
   },
 ] as const;

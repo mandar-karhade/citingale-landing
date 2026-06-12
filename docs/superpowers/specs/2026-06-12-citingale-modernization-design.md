@@ -51,10 +51,14 @@ Proof points:
 
 Product rows:
 
-- Citingale Review Studio: Plan and execute systematic literature reviews with protocol-aware screening, source tracking, extraction support, and reproducible evidence tables.
-- Citingale Synthesis: Move from extracted evidence to narrative synthesis, structured summaries, evidence maps, and meta-analysis-ready outputs.
-- Citingale Methods Library: Reusable templates for review protocols, FAIR documentation, gap analysis, situation analysis, and evidence-based recommendations.
-- Citingale Intelligence Briefs: Short, inspectable research briefs that connect claims to citations, assumptions, and source-level reasoning for decision makers.
+- Citingale VeroFAIR™: A complete AI assisted research and writeup platform designed for traceable, source-grounded work that does not hallucinate.
+- Citingale SoProLink™: A domain specific information, alert, network, and social media content generation platform. Link to `https://soprolink.com`.
+- Citingale ARMS™: A complete end to end Active Recall Management System for drug and device manufacturers.
+- Citingale APQR: An AI-enhanced continuous process validation system for regulated manufacturing workflows.
+- Physician'sFriend™: A privacy first suite that simplifies day-to-day work for physicians, clinical teams, and hospital systems.
+- OnlyOfflineApps™: A privacy first suite of Android and Apple applications developed to support health and wellness without cloud dependency. Link to `https://onlyoffline.org`.
+- Semaphone™: Software that lets users automate anything on Android by providing natural language instructions.
+- Research Projects: Memory Decay in Knowledge Graphs, linked to `https://arxiv.org/abs/2604.26970`.
 
 ## Dynamic Elements
 
@@ -99,6 +103,11 @@ Add a lightweight `/updates` route backed by local data. It should include:
 
 The homepage should show the latest two or three updates and link to `/updates`.
 
+Future update tracker:
+
+- A separate project will generate an RSS feed or JSON response containing significant news and related metadata.
+- The current implementation should keep updates local and data-driven so that feed integration can be added later without redesigning the page.
+
 ## Technical Shape
 
 Current stack:
@@ -131,4 +140,4 @@ Visual verification:
 
 ## Implementation Assumptions
 
-The first implementation can use the draft product names and copy above. Product rows should be represented as data objects with a `href` field. Until real product destinations are provided, product rows should link to `mailto:contact@citingale.com` with a product-specific subject so every visible product action is valid.
+Product rows should be represented as data objects with a `href` field. Use real URLs where provided. Until real destinations are provided for the remaining products, product rows should link to `mailto:contact@citingale.com` with a product-specific subject so every visible product action is valid.
