@@ -45,6 +45,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "sync:medium": "node scripts/sync-medium.mjs",
+    "test:medium": "node --test scripts/sync-medium.test.mjs",
     "deploy": "npm run build && npx wrangler pages deploy ./out --project-name=citingale-landing --branch=main"
   }
 }
