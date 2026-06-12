@@ -1,23 +1,50 @@
 [
   {
-    "date": "Jun 10, 2026",
-    "title": "Meta's AI-powered support assistant Helped To Hijack Obama's Instagram (WH)",
+    "date": "Jun 4, 2026",
+    "title": "Meta’s AI-powered support assistant Helped To Hijack Obama’s Instagram (WH)",
     "subtitle": "AI support tools are security liabilities without strict, deterministic verification gates.",
-    "url": "https://medium.com/@AiDocTakes",
-    "publishedAt": "2026-06-10T12:00:00.000Z"
+    "url": "https://levelup.gitconnected.com/metas-ai-powered-support-assistant-helped-to-hijack-obama-s-instagram-wh-1bde3ac471fa",
+    "imageUrl": "https://cdn-images-1.medium.com/max/720/0*INcKpCbGID5qd0mp.jpg",
+    "publishedAt": "2026-06-04T06:36:00.000Z"
   },
   {
-    "date": "Jun 8, 2026",
-    "title": "NVIDIA's Vertical Integration: How Enterprise Should Navigate It",
-    "subtitle": "NVIDIA's GTC Taipei pitch, AI factories, Vera CPUs, and the cost nobody wants to say out loud.",
-    "url": "https://medium.com/@AiDocTakes",
-    "publishedAt": "2026-06-08T12:00:00.000Z"
+    "date": "Jun 2, 2026",
+    "title": "NVIDIA’s Vertical Integration: How Enterprise Should Navigate It",
+    "subtitle": "NVIDIA’s GTC Taipei Pitch: AI Factories, Vera CPUs, and the Cost Nobody Wants to Say Out Loud",
+    "url": "https://medium.com/data-science-collective/nvidias-vertical-integration-how-enterprise-should-navigate-it-5247cb51624a",
+    "imageUrl": "https://cdn-images-1.medium.com/max/1672/1*wnkxGoCUahLvV2y_e5flaA.png",
+    "publishedAt": "2026-06-02T16:02:30.000Z"
   },
   {
-    "date": "Jun 6, 2026",
+    "date": "May 31, 2026",
     "title": "AutoScientists: A New Blueprint for Long-Running Scientific Agents",
-    "subtitle": "Auto scientists turn automated research into a team problem with shared evidence and critique loops.",
-    "url": "https://medium.com/@AiDocTakes",
-    "publishedAt": "2026-06-06T12:00:00.000Z"
+    "subtitle": "Auto scientists turn automated research into a team problem. Agents share evidence, form and dissolve groups, critique each other’s…",
+    "url": "https://pub.towardsai.net/autoscientists-a-new-blueprint-for-long-running-scientific-agents-2743a9eb6afa",
+    "imageUrl": "https://cdn-images-1.medium.com/max/800/1*RYEv-Me-MfMgPu0vf15icg.gif",
+    "publishedAt": "2026-05-31T06:46:33.000Z"
+  },
+  {
+    "date": "May 29, 2026",
+    "title": "Microsoft’s SkillOpt Is Not Prompt Engineering. It Is Prompt Training.",
+    "subtitle": "SkillOpt Turns Agent Skills Into Trainable Artifacts",
+    "url": "https://levelup.gitconnected.com/microsofts-skillopt-is-not-prompt-engineering-it-is-prompt-training-8f4d7de8b217",
+    "imageUrl": "https://cdn-images-1.medium.com/max/800/1*AB9KhGoRr_VSUvUNEUdrLQ.gif",
+    "publishedAt": "2026-05-29T20:20:50.000Z"
+  },
+  {
+    "date": "May 29, 2026",
+    "title": "NVIDIA Drops a Model “LocateAnything”",
+    "subtitle": "LocateAnything with Parallel Box Decoding Turns Visual Grounding Into an Agent Primitive",
+    "url": "https://pub.towardsai.net/nvidia-drops-a-model-locateanything-e0c50de7326d",
+    "imageUrl": "https://cdn-images-1.medium.com/max/800/1*wxCzRjBkw6vQb0iNKSgDdA.gif",
+    "publishedAt": "2026-05-29T15:56:11.000Z"
+  },
+  {
+    "date": "May 28, 2026",
+    "title": "The End of YouTube AI Slop",
+    "subtitle": "YouTube Is Finally Labeling AI Content Aggressively, moving from AI Disclosure to AI Detection.",
+    "url": "https://medium.com/design-bootcamp/the-end-of-youtube-ai-slop-314ae7c8c52c",
+    "imageUrl": "https://cdn-images-1.medium.com/max/1672/1*S1HXL5zypuwC0ha-ZOLgRA.png",
+    "publishedAt": "2026-05-28T15:55:19.000Z"
   }
 ]

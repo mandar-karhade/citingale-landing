@@ -12,7 +12,12 @@ test('parseMediumFeed returns posts with date title subtitle and url', () => {
         <title><![CDATA[First Article]]></title>
         <link>https://medium.com/@AiDocTakes/first-article</link>
         <pubDate>Wed, 10 Jun 2026 12:30:00 GMT</pubDate>
-        <content:encoded><![CDATA[<p>First subtitle sentence. Second sentence.</p>]]></content:encoded>
+        <content:encoded><![CDATA[
+          <div class="medium-feed-item">
+            <p class="medium-feed-image"><img src="https://cdn-images-1.medium.com/max/800/first.png" width="800"></p>
+            <p class="medium-feed-snippet">First subtitle sentence. Second sentence.</p>
+          </div>
+        ]]></content:encoded>
       </item>
       <item>
         <title>Second Article</title>
@@ -30,6 +35,7 @@ test('parseMediumFeed returns posts with date title subtitle and url', () => {
       title: 'First Article',
       subtitle: 'First subtitle sentence. Second sentence.',
       url: 'https://medium.com/@AiDocTakes/first-article',
+      imageUrl: 'https://cdn-images-1.medium.com/max/800/first.png',
       publishedAt: '2026-06-10T12:30:00.000Z',
     },
     {
@@ -37,6 +43,7 @@ test('parseMediumFeed returns posts with date title subtitle and url', () => {
       title: 'Second Article',
       subtitle: 'Second subtitle from description.',
       url: 'https://medium.com/@AiDocTakes/second-article',
+      imageUrl: '',
       publishedAt: '2026-06-09T10:00:00.000Z',
     },
   ]);
@@ -67,6 +74,7 @@ test('syncMediumPosts uses injected fetch with timeout signal and falls back to 
       title: 'Cached Article',
       subtitle: 'Cached subtitle.',
       url: 'https://medium.com/@AiDocTakes/cached',
+      imageUrl: 'https://cdn-images-1.medium.com/max/800/cached.png',
       publishedAt: '2026-06-01T12:00:00.000Z',
     },
   ];

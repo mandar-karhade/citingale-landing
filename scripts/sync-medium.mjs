@@ -14,7 +14,9 @@ function decodeXml(value) {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&#x27;/g, "'");
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_match, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 16)))
+    .replace(/&#([0-9]+);/g, (_match, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)));
 }
 
 function stripHtml(value) {
@@ -34,6 +36,26 @@ function tagValue(xml, tagName) {
   const pattern = new RegExp(`<${escapeRegExp(tagName)}\\b[^>]*>([\\s\\S]*?)<\\/${escapeRegExp(tagName)}>`, 'i');
   const match = xml.match(pattern);
   return match ? decodeXml(match[1]).trim() : '';
+}
+
+function attributeValue(html, attributeName) {
+  const pattern = new RegExp(`${escapeRegExp(attributeName)}=["']([^"']+)["']`, 'i');
+  const match = html.match(pattern);
+  return match ? decodeXml(match[1]).trim() : '';
+}
+
+function firstImageUrl(html) {
+  const imageMatch = html.match(/<img\b[^>]*>/i);
+  if (!imageMatch) {
+    return '';
+  }
+
+  return cleanUrl(attributeValue(imageMatch[0], 'src'));
+}
+
+function feedSnippet(html) {
+  const snippetMatch = html.match(/<p\b[^>]*class=["'][^"']*medium-feed-snippet[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
+  return snippetMatch ? stripHtml(snippetMatch[1]) : '';
 }
 
 function formatDate(pubDate) {
@@ -62,7 +84,7 @@ function cleanUrl(value) {
 }
 
 function summarize(value) {
-  const text = stripHtml(value);
+  const text = feedSnippet(value) || stripHtml(value);
   if (text.length <= 180) {
     return text;
   }
@@ -87,6 +109,7 @@ export function parseMediumFeed(xml, options = {}) {
       const pubDate = stripHtml(tagValue(item, 'pubDate'));
       const content = tagValue(item, 'content:encoded') || tagValue(item, 'description');
       const subtitle = summarize(content);
+      const imageUrl = firstImageUrl(content);
       const publishedAt = new Date(pubDate);
 
       return {
@@ -94,6 +117,7 @@ export function parseMediumFeed(xml, options = {}) {
         title,
         subtitle,
         url: link,
+        imageUrl,
         publishedAt: Number.isNaN(publishedAt.getTime()) ? '' : publishedAt.toISOString(),
       };
     })

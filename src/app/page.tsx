@@ -6,7 +6,6 @@ import { products, updates } from '@/data/site-content';
 
 const latestPosts = mediumPosts.slice(0, 3);
 const latestUpdates = updates.slice(0, 3);
-const featuredProducts = products.slice(0, 4);
 
 export default function Home() {
   return (
@@ -33,7 +32,6 @@ export default function Home() {
                 <a href="#products">Products</a>
                 <a href="#blog">Blog</a>
                 <Link href="/updates">Updates</Link>
-                <a href="#about">About</a>
                 <a href="mailto:contact@citingale.com">Contact</a>
               </nav>
             </header>
@@ -41,30 +39,22 @@ export default function Home() {
             <div className="video-hero-copy">
               <h1>AI-Enhanced Intelligence You can Inspect</h1>
               <p>
-                Citingale turns literature review, meta-analysis, and evidence synthesis into a transparent research workflow.
-                Every product is built around faster intelligence without losing the source, the method, or the trail of reasoning.
+                Citingale builds inspectable AI products for domain intelligence, regulated workflows, clinical operations,
+                privacy-first applications, and research automation. The common layer is traceable reasoning: sources, decisions,
+                and outputs stay connected.
               </p>
 
               <div className="video-hero-actions">
                 <a href="#products">Explore products</a>
-                <a href="#blog">Read the blog</a>
+                <Link href="/blog">Read the blog</Link>
               </div>
-            </div>
-
-            <div className="video-hero-strip" aria-label="Featured products">
-              {featuredProducts.map((product) => (
-                <a key={product.name} href={product.href}>
-                  <strong>{product.name}</strong>
-                  <span>{product.tag}</span>
-                </a>
-              ))}
             </div>
           </section>
 
           <section id="products" className="mt-16 scroll-mt-8">
             <div className="section-heading">
               <h2>Product line</h2>
-              <p>Each row becomes a linked product or website. The homepage stays minimal while still making the ecosystem obvious.</p>
+              <p>A linked product and research ecosystem spanning inspectable AI, regulated workflows, clinical operations, and privacy-first tools.</p>
             </div>
 
             <div className="mt-5 border-t border-slate-200">
@@ -112,33 +102,28 @@ export default function Home() {
             <div id="blog" className="scroll-mt-8">
               <div className="feed-heading">
                 <h2>Blog</h2>
-                <a href="https://medium.com/@AiDocTakes" target="_blank" rel="noreferrer">
-                  Medium
-                </a>
+                <Link href="/blog">View all</Link>
               </div>
               <div className="feed-list">
                 {latestPosts.map((post) => (
                   <a href={post.url} className="feed-row" key={post.url} target="_blank" rel="noreferrer">
-                    <time>{post.date}</time>
+                    {post.imageUrl ? (
+                      <span
+                        className="feed-thumbnail"
+                        style={{ backgroundImage: `url("${post.imageUrl}")` }}
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <time>{post.date}</time>
+                    )}
                     <span>
+                      {post.imageUrl ? <time>{post.date}</time> : null}
                       <strong>{post.title}</strong>
                       <span>{post.subtitle}</span>
                     </span>
                   </a>
                 ))}
               </div>
-            </div>
-          </section>
-
-          <section id="about" className="mt-16 border-t border-slate-200 pt-10">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-medium tracking-normal text-slate-950">
-                Research simplified, without hiding the reasoning.
-              </h2>
-              <p className="mt-4 text-base leading-8 text-slate-600">
-                Citingale is built for systematic literature review, meta-analysis, and evidence synthesis. It does not replace
-                human intelligence; it augments researchers with standardized, reproducible, and inspectable evidence workflows.
-              </p>
             </div>
           </section>
 

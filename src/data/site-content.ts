@@ -83,23 +83,23 @@ export const proofPoints = [
 export const updates = [
   {
     date: 'Jun 2026',
-    title: 'External news tracker planned',
-    category: 'Updates',
+    title: 'Agentic AI moves from demos to durable workflows',
+    category: 'AI agents',
     subtitle:
-      'A separate tracker will publish significant news into an RSS or JSON feed that the Citingale updates page can consume later.',
+      'Tracking long-horizon agents, tool-use reliability, automated critique loops, and the evaluation gap between impressive demos and dependable systems.',
   },
   {
     date: 'Jun 2026',
-    title: 'Daily Medium sync added',
-    category: 'Automation',
+    title: 'AI infrastructure choices become enterprise strategy',
+    category: 'AI infrastructure',
     subtitle:
-      'Citingale refreshes the latest @AiDocTakes articles at build time through a scheduled GitHub Actions workflow.',
+      'Following model serving costs, inference hardware, vertical integration, and the tradeoffs enterprises inherit when platforms control the full stack.',
   },
   {
     date: 'Jun 2026',
-    title: 'Product constellation updated',
-    category: 'Product',
+    title: 'AI accountability pressure keeps expanding',
+    category: 'AI governance',
     subtitle:
-      'The homepage now foregrounds the actual Citingale product and research ecosystem.',
+      'Monitoring provenance, labeling, regulated-use boundaries, security failures, and the practical controls needed when AI systems touch real decisions.',
   },
 ] as const;

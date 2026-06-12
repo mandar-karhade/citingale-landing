@@ -20,7 +20,8 @@ export default function UpdatesPage() {
               Updates
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Product notes, design changes, automation work, and company progress from the Citingale ecosystem.
+              Signals from the AI landscape: agentic systems, infrastructure shifts, governance pressure, security failures,
+              and the model behavior that changes what teams can safely build.
             </p>
           </section>
 
