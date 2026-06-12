@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white relative">
       <main className="relative z-10 container mx-auto px-4 py-8">
-      <header className="flex items-center justify-between p-4 mb-8">
+      <header className="flex items-center p-4 mb-8">
           <div className="flex items-center">
             <Image src="/citingale-logo.png" alt="Citingale logo" width={80} height={80} />
             <div className="ml-4">
@@ -19,25 +19,6 @@ export default function Home() {
                 className="text-lg tracking-[5px] uppercase mt-1 text-gray-400"
               />
             </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <a 
-              href="mailto:contact@citingale.com?subject=I want to be on the waitlist"
-              className="flex items-center space-x-2 cursor-pointer"
-            >
-              <div className="relative w-12 h-12">
-                <Image
-                  src="/QHTn.gif"
-                  alt="Inbox Animation"
-                  width={40}
-                  height={40} 
-                  unoptimized
-                />
-              </div>
-              <span className="text-blue-500 text-lg font-bold font-inter tracking-[1px] ">
-                Join Waitlist
-              </span>
-            </a>
           </div>
         </header>
 
@@ -138,4 +119,3 @@ export default function Home() {
     </div>
   )
 }
-
